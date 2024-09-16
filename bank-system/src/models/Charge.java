@@ -3,18 +3,18 @@ package models;
 public class Charge {
     private int id;
     private String name;
-    private String salary;
+    private double salary;
 
-    public Charge(int id, String name, String salary) {
+    public Charge(int id, String name, double salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
     }
-    public String getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 

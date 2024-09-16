@@ -1,9 +1,12 @@
 package models;
 
+import java.util.List;
+
 public class BankBranch {
     private Integer id;
     private String address;
     private Bank bank;
+    private List<Employee> employeeList;
 
     public BankBranch(Integer id, String address, Bank bank) {
         this.id = id;

@@ -8,15 +8,17 @@ public class Client extends Person{
     private Date dateOfRegistration;
     private List<Account> accounts;
     private BankBranch bankBranch;
+    private String password;
 
     public Client(){
         super();
     }
-    public Client(Date dateOfRegistration,BankBranch bankBranch, String dni, String name, String surname, String gender, String address, String phone, String email, String dateOfBirth) {
+    public Client(Date dateOfRegistration,BankBranch bankBranch, String dni, String name, String surname, String gender, String address, String phone, String email, String dateOfBirth, String password) {
         super(dni, name, surname, gender, address, phone, email, dateOfBirth);
         this.dateOfRegistration = dateOfRegistration;
         this.bankBranch = bankBranch;
         this.accounts = new ArrayList<>();
+        this.password = password;
     }
 
     public Integer getId() {
@@ -44,6 +46,12 @@ public class Client extends Person{
         this.bankBranch = bankBranch;
     }
 
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
     public String toString(){
         return "Client{ ID:" + id + ", Name: "+ super.getName() +", Surname: " + super.getSurname() + ", DNI" + super.getDni() + ", Bank branch:" + bankBranch + "}";
     }
